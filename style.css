@@ -1,0 +1,151 @@
+/* Styles du menu déroulant */
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: #333;
+  display: flex;
+  align-items: center;
+}
+
+.menu ul li.logo {
+  margin-right: auto;
+}
+
+.menu ul li.logo img {
+  height: 50px;
+  width: auto;
+  display: block;
+  padding: 5px 20px;
+}
+
+.menu ul li {
+  position: relative;
+}
+
+.menu ul li a {
+  display: block;
+  padding: 15px 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu ul li:hover {
+  background: #444;
+}
+
+/* Sous-menu caché par défaut */
+.menu ul li .sous {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #444;
+  min-width: 200px;
+  z-index: 1;
+}
+
+/* Affichage du sous-menu au survol */
+.menu ul li:hover .sous {
+  display: block;
+}
+
+.menu ul li .sous li {
+  display: block;
+}
+
+.menu ul li .sous li a {
+  padding: 10px 20px;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #ffff99;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  font-style: italic;
+}
+
+.liens {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.liens a {
+  text-decoration: none;
+  color: white;
+  background-color: #007BFF;
+  padding: 12px 25px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+.liens a:hover {
+  background-color: #0056b3;
+}
+
+.galerie {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 20px;
+}
+
+.galerie img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.galerie img:hover {
+  transform: scale(1.05);
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.lien-contact {
+  text-decoration: none;
+  color: #fff;
+  background-color: #28a745;
+  padding: 12px 25px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s;
+  width: 200px;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.lien-contact:hover {
+  background-color: #1e7e34
